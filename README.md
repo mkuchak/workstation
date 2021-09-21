@@ -1,4 +1,8 @@
-# Workstation Commands
+# Workstation
+
+Ubuntu 21.04 LTS, Htop, Nano, Curl, ZSH, Git, Sugar Git, GitHub CLI, Node 16.x, Npm 7.x and Yarn.
+
+## Docker Commands
 ```bash
 # Build this image
 docker build -t workstation .
