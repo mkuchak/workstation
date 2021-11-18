@@ -1,6 +1,13 @@
 # Workstation
 
-Ubuntu 21.04 LTS, Htop, Nano, Curl, ZSH, Git, Sugar Git, GitHub CLI, Node 16.x, Npm 7.x and Yarn
+Ubuntu 21.10 LTS, Htop, Nano, Curl, ZSH, Git, Sugar Git, GitHub CLI, Node 17.x, Npm 8.x and Yarn
+
+<div align="center">
+<br />
+<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Shell%20Script-0E141A?style=for-the-badge&logo=gnubash&logoColor=white" />
+<img src="https://img.shields.io/badge/githubactions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" />
+</div>
 
 ## Docker Commands
 ```bash
