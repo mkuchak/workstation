@@ -6,13 +6,13 @@ apt install -y locales sudo git htop nano curl;
 locale-gen en_US.UTF-8;
 
 # Node.js Setup
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -;
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -;
 apt install -y nodejs yarn;
 
 # ZSH Setup
 apt install zsh -y;
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
-yes n | sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)";
+yes n | sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)";
 git clone https://github.com/denysdovhan/spaceship-prompt.git "/root/.oh-my-zsh/themes/spaceship-prompt" --depth=1;
 ln -s "/root/.oh-my-zsh/themes/spaceship-prompt/spaceship.zsh-theme" "/root/.oh-my-zsh/themes/spaceship.zsh-theme";
 zsh;
@@ -25,10 +25,9 @@ echo -e "\nexec zsh" >> ~/.bashrc;
 echo -e "\n# WSL fix terminal ctrl\nbindkey -e\nbindkey '^H' backward-kill-word # Control + backspace\nbindkey ';5C' forward-word # Control + arrows\nbindkey ';5D' backward-word\n\n# Linux aliases\nalias ws='cd /home/Workspaces'\nalias dot='setopt -s glob_dots'\nalias ll='ls -lah'\nalias ssh='ssh -o ServerAliveInterval=60'\nalias ssh-reset='ssh-keygen -R'\n" >> ~/.zshrc;
 
 # Sugar Git Setup
-git clone https://github.com/mkuchak/sugar-git /root/.sugar-git;
-cd /root/.sugar-git;
-bash /root/.sugar-git/install.sh;
+bash <(curl -Ls raw.githubusercontent.com/mkuchak/sugar-git/main/setup);
 git config --global core.editor "code --wait";
+git config --global push.followTags true;
 
 # GitHub CLI Setup
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
